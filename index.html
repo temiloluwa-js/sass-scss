@@ -1,70 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="index.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-  </head>
-  <body>
-    <header>
-      <nav></nav>
-    </header>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <style>
+        input:focus:invalid{
+            border: 2px solid red;
+        }
 
-    <section class="first__section">
-        <div class="first__img">
-            <img src="" alt="">
-            <p></p>
-        </div>
-        <div class="second__img">
-          <img src="" alt="">
-          <p></p>
-        </div>
-    </section>
 
-    <section class="second__section">
-        <div class="first__img">
-            <img src="" alt="">
-            <p></p>
-        </div>
-        <div class="second__img">
-          <img src="" alt="">
-          <p></p>
-        </div>
-    </section>
+        input:valid{
+            border: 2px solid black;
+        }
+    </style>
 
-    <section class="third__section">
-      <div class="first__img">
-          <img src="" alt="">
-          <p></p>
-      </div>
-      <div class="second__img">
-        <img src="" alt="">
-        <p></p>
-      </div>
-    </section>
+    <form>
+        <label for="choose">Would you prefer a banana or cherry?</label>
+        <input id="choose" name="i_like" required pattern="[Bb]anana|[Cc]herry">
+        <button>Submit</button>
+      </form>
 
-    <section class="fourth__section">
-        <div class="first__img">
-            <img src="" alt="">
-            <p></p>
-        </div>
-        <div class="second__img">
-          <img src="" alt="">
-          <p></p>
-        </div>
-    </section>
-
-    <section class="fifth__section">
-        <div class="first__img">
-            <img src="" alt="">
-            <p></p>
-        </div>
-        <div class="second__img">
-          <img src="" alt="">
-          <p></p>
-        </div>
-    </section>
-  </body>
+</body>
 </html>
