@@ -1,29 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="index.css">
-</head>
-<body>
+  </head>
+  <body>
     <style>
-        input:focus:invalid{
-            border: 2px solid red;
-        }
+      body {
+        font: 1em sans-serif;
+        width: 200px;
+        padding: 0;
+        margin: 0 auto;
+      }
 
+      p * {
+        display: block;
+      }
 
-        input:valid{
-            border: 2px solid black;
-        }
+      input[type="email"] {
+        -webkit-appearance: none;
+        appearance: none;
+
+        width: 100%;
+        border: 1px solid #333;
+        margin: 0;
+
+        font-family: inherit;
+        font-size: 90%;
+
+        box-sizing: border-box;
+      }
+
+      /* This is our style for the invalid fields */
+      input:invalid {
+        border-color: #900;
+        background-color: #fdd;
+      }
+
+      input:focus:invalid {
+        outline: none;
+      }
+
+      /* This is the style of our error messages */
+      .error {
+        width: 100%;
+        padding: 0;
+
+        font-size: 80%;
+        color: white;
+        background-color: #900;
+        border-radius: 0 0 5px 5px;
+
+        box-sizing: border-box;
+      }
+
+      .error.active {
+        padding: 0.3em;
+      }
     </style>
 
-    <form>
-        <label for="choose">Would you prefer a banana or cherry?</label>
-        <input id="choose" name="i_like" required pattern="[Bb]anana|[Cc]herry">
-        <button>Submit</button>
-      </form>
+    <form novalidate>
+      <p>
+        <label for="mail">
+          <span>Please enter an email address:</span>
+          <input type="email" id="mail" name="mail" required minlength="8" />
+          <span class="error" aria-live="polite"></span>
+        </label>
+      </p>
+      <button>Submit</button>
+    </form>
 
-</body>
+    <script>
+      const form = document.getElementsByTagName('form')[0];
+
+      const email = document.getElementById('mail');
+      const emailError = document.querySelector('#mail + span.error')
+
+      email.addEventListener('input', function (event) {
+        if (email.validity.valid){
+          emailError.textContent = '';
+          emailError.className = 'error'
+        } else{
+          showError();
+          event.preventDefault();
+        }
+      })
+
+      function showError() {
+        if (email.validity.valueMissing){
+          emailError.textContent = 'You need to enter an e-mail address.'
+        }else if 
+      }
+    </script>
+  </body>
 </html>
