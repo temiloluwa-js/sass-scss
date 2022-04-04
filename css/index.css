@@ -1,0 +1,12 @@
+container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: minmax(0, 1fr), minmax(0, 1fr), minmax(0, 1fr), minmax(0, 1fr), minmax(0, 1fr), minmax(0, 1fr), minmax(0, 1fr), minmax(0, 1fr), minmax(0, 1fr), minmax(0, 1fr), minmax(0, 1fr), minmax(0, 1fr);
+      grid-template-columns: minmax(0, 1fr), minmax(0, 1fr), minmax(0, 1fr), minmax(0, 1fr), minmax(0, 1fr), minmax(0, 1fr), minmax(0, 1fr), minmax(0, 1fr), minmax(0, 1fr), minmax(0, 1fr), minmax(0, 1fr), minmax(0, 1fr);
+}
+
+container .item {
+  -webkit-box-shadow: 2px 2px 2px;
+          box-shadow: 2px 2px 2px;
+}
+/*# sourceMappingURL=index.css.map */
