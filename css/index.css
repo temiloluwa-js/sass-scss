@@ -8,5 +8,6 @@ container {
 container .item {
   -webkit-box-shadow: 2px 2px 2px;
           box-shadow: 2px 2px 2px;
+          border: 1ch;
 }
 /*# sourceMappingURL=index.css.map */
